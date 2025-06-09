@@ -2,12 +2,12 @@ import os
 from pathlib import Path
 import logging
 
-# Corrected 'Level' to 'level'
+
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s')
 
 project_name = "textSummarizer"
 
-# Corrected _init_ to __init__ (for proper Python package recognition)
+
 list_of_files = [
     ".github/workflows/.gitkeep",
     f"src/{project_name}/__init__.py",
@@ -20,7 +20,7 @@ list_of_files = [
     f"src/{project_name}/pipeline/__init__.py",
     f"src/{project_name}/entity/__init__.py",
     f"src/{project_name}/constants/__init__.py",
-    "config/config.yaml",   # corrected dot to slash in config path
+    "config/config.yaml",   
     "params.yaml",
     "app.py",
     "main.py",
@@ -31,7 +31,6 @@ list_of_files = [
     "test.py"
 ]
 
-# Corrected 'list_offiles' to 'list_of_files', 'path' to 'Path'
 for filepath in list_of_files:
     filepath = Path(filepath)
     filedir, filename = os.path.split(filepath)
